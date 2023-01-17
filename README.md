@@ -1,2 +1,2 @@
 # Time
-Time with changing color
+Time with color changing 
