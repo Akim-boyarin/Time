@@ -1,7 +1,7 @@
 class Time {
     #timeNode = null;
     #time = '';
-    #color = "rgb(0, 0, 0)";
+    #color = "rgb(100, 100, 100)";
 
     constructor(timeSelector) {
         this.#timeNode = document.querySelector(timeSelector);
