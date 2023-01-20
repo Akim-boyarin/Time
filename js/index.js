@@ -70,7 +70,6 @@ class Time {
         let paintRange = 1500;
         let paint = function runPainting() {
             this.#setColor();
-
             setTimeout(runPainting, paintRange);
         };
         paint();
