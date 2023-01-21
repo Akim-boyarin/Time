@@ -65,15 +65,11 @@ class Time {
     }
     #run() {
         let timeRange = 1000;
-        setInterval(this.#setTime, timeRange);
 
-        let paintRange = 1500;
-        let setColor = this.#setColor.bind(this);
-        let paint = function runPainting() {
-            setColor();
-            setTimeout(runPainting, paintRange);
-        };
-        paint();
+        setInterval(() => {
+            this.#setTime();
+            this.#setColor();
+        }, timeRange);
     }
 }
 
