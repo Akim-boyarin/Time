@@ -24,7 +24,7 @@ class Time {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
     #changeColorPart(colorPart) {
-        const RANGE = 10;
+        const RANGE = 5;
         let newColorPart = this.#getRandomNum(colorPart - RANGE, colorPart + RANGE);
         
         if (newColorPart <= 0) newColorPart = 0;
@@ -67,8 +67,11 @@ class Time {
         let timeRange = 1000;
         let paintRange = 1200;
 
-        setInterval(this.#setTime, timeRange);
-        setInterval(this.#setColor, paintRange);
+        let setTime = this.#setTime.bind(this);
+        let setColor = this.#setColor.bind(this);
+
+        setInterval(setTime, timeRange);
+        setInterval(setColor, paintRange);
     }
 }
 
